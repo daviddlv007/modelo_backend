@@ -39,6 +39,7 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         source: target/demo-0.0.1-SNAPSHOT.jar
         target: /home/ec2-user/demo-0.0.1-SNAPSHOT.jar
+        overwrite: true
 
     - name: Start systemd service on EC2
       uses: appleboy/ssh-action@v0.1.10
